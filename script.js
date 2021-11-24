@@ -9,7 +9,7 @@ constructor(x, y, h, w, vx, vy){
  }
 
  draw(){
-  ellipse(this.x,this.y,50,50);
+  ellipse(this.x,this.y,60,60);
   this.x = this.x + this.vx;
   this.y = this.y + this.vy;
  
@@ -22,17 +22,23 @@ constructor(x, y, h, w, vx, vy){
   }
  }
 }
- var ball1;
+ var ball1, ball2, ball3;
 
  function setup() {
 	createCanvas(500, 400);
 
-ball1 = new Ball(35,200,50,50,5,5);
+ball1 = new Ball(250,300,10,25,10,5);
+ball2 = new Ball(80,50,40,20,6,10);
+ball3 = new Ball(200,150,100,50,3,-4);
 }
 function draw() {
-	background(225);  
-  
+	background('gold');  
+  fill('red');
   ball1.draw();
+  fill('blue');
+  ball2.draw();
+  fill('green');
+  ball3.draw();
 }
 
     
