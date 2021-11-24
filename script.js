@@ -1,13 +1,12 @@
 class Ball {
-  constructor() {x, y, h, w, vx, vy }
+constructor(x, y, h, w, vx, vy){
   this.x = x;
   this.y = y;
   this.height = h;
   this.width = w;
   this.vx = vx;
   this.vy = vy;
- 
-}
+ }
 
  draw(){
   ellipse(this.x,this.y,50,50);
@@ -23,4 +22,17 @@ class Ball {
   }
  }
 }
+ var ball1;
+
+ function setup() {
+	createCanvas(500, 400);
+
+ball1 = new Ball(35,200,50,50,5,5);
+}
+function draw() {
+	background(225);  
+  
+  ball1.draw();
+}
+
     
